@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class DailyMath {
 
-    private static final int TOTAL_QUESTIONS = 10;
+    private static final int TOTAL_QUESTIONS = 11;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -12,7 +12,7 @@ public class DailyMath {
         int score = 0;
 
         System.out.println("DailyMath");
-        System.out.println("Simple math practice (10 questions).");
+        System.out.println("Simple math practice (11 questions).");
         System.out.println("-------------------------------------");
 
         for (int i = 0; i < TOTAL_QUESTIONS; i++) {
@@ -97,7 +97,9 @@ public class DailyMath {
             a = random.nextInt(21);
             b = random.nextInt(21);
             if (b > a) {
-                int t = a; a = b; b = t;
+                int t = a;
+                a = b;
+                b = t;
             }
             symbol = "-";
             ans = a - b;
@@ -123,4 +125,3 @@ public class DailyMath {
         }
     }
 }
-
